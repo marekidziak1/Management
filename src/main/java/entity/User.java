@@ -4,6 +4,8 @@ public class User {
     private Long id;
     private String login;
     private String password;
+    public static String userRegex ="#";
+
     public User(Long id, String login, String password){
         this.id=id;
         this.login=login;
@@ -13,11 +15,10 @@ public class User {
         return id;
     }
     /*
-    public void serLogin(String login){
+    public void setLogin(String login){
         this.login=login;
     }
     */
-
     public String getLogin(){
         return login;
     }
@@ -29,13 +30,10 @@ public class User {
     public String getPassword(){
         return password;
     }
-
     @Override
     public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", login='" + login + '\'' +
-                ", password='" + password + '\'' +
-                '}';
+        return  id + userRegex
+                + login + userRegex
+                + password + userRegex;
     }
 }

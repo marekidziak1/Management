@@ -27,9 +27,8 @@ public class Boots extends Product {
 
     @Override
     public String toString() {
-        return super.toString()+ "Boots{" +
-                "size=" + size +
-                ", isNaturalSkin=" + isNaturalSkin +
-                '}';
+        return super.toString()
+                + Product.productRegex + size
+                + Product.productRegex + isNaturalSkin;
     }
 }

@@ -1,6 +1,8 @@
 package entity;
 
 public class Product {
+    public static String productRegex= "#";
+
     private Long id;
     private String productName;
     private Float price;
@@ -58,13 +60,11 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", productName='" + productName + '\'' +
-                ", price=" + price +
-                ", weight=" + weight +
-                ", color='" + color + '\'' +
-                ", productCount=" + productCount +
-                '}';
+        return id + productRegex
+                + productName + productRegex
+                + price + productRegex
+                + weight + productRegex
+                + color + productRegex
+                + productCount;
     }
 }
